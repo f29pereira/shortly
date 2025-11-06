@@ -1,0 +1,42 @@
+/*
+Global CSS styles
+*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /*Font*/
+  --font-inconsolata: "Poppins", sans-serif;
+
+  /*Primary*/
+  --blue-400: hsl(180, 66%, 49%);
+  --purple-950: hsl(257, 27%, 26%);
+
+  /*Secondary*/
+  --red-400: hsl(0, 87%, 67%);
+
+  /*Neutral*/
+  --gray-400: hsl(0, 0%, 75%);
+  --gray-500: hsl(257, 7%, 63%);
+  --gray-900: hsl(255, 11%, 22%);
+  --gray-950: hsl(260, 8%, 14%);
+}
+
+html,
+body {
+  font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased; /*smooths the edges of fonts on Chrome, Safari, Edge*/
+  -moz-osx-font-smoothing: grayscale; /*smooths the edges of fonts Firefox on macOS*/
+}
+
+/*Available for screen readers*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
