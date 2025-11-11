@@ -1,0 +1,22 @@
+/*
+CSS Module for PillLink component
+*/
+
+/*pill button*/
+.pillButton {
+  cursor: pointer;
+  text-align: center;
+  background-color: var(--blue-400);
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+}
+
+.pillButton:hover {
+  background-color: var(--blue-300);
+}
+
+.link {
+  color: var(--neutral-0);
+}
