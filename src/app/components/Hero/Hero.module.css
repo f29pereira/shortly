@@ -1,0 +1,104 @@
+/*
+CSS Module for Hero component
+*/
+
+/*main section container*/
+.heroCont {
+  margin-top: 2rem;
+  padding-bottom: 8rem;
+}
+
+/*image container*/
+.imgCont {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*image*/
+.img {
+  width: 500px;
+  height: 300px;
+  margin-right: -9.3rem; /*150px*/
+}
+
+/*content container*/
+.contentCont {
+  padding: 0 2rem;
+}
+
+/*title*/
+.title {
+  color: var(--gray-900);
+  font-size: 2.5rem;
+  line-height: 1;
+  margin: 2rem auto 1rem auto;
+}
+
+/*Shortly description*/
+.description {
+  color: var(--gray-500);
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+/*get started link container*/
+.getStartedCont {
+  max-width: 12.5rem; /*200px*/
+  margin: auto;
+}
+
+@media (min-width: 48rem /*768px*/) {
+  /*content container*/
+  .contentCont {
+    padding: 0 8rem;
+  }
+}
+
+@media (min-width: 62.5rem /*1000px*/) {
+  /*main section container*/
+  .heroCont {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    margin-top: 4rem;
+  }
+
+  /*image*/
+  .img {
+    width: 733px;
+    height: 482px;
+  }
+
+  /*content container*/
+  .contentCont {
+    flex: 1;
+    padding: 0 0 0 8rem;
+  }
+
+  /*title*/
+  .title {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 4rem 0 0 0;
+  }
+
+  /*Shortly description*/
+  .description {
+    margin-bottom: 2rem;
+  }
+
+  .title,
+  .description {
+    text-align: left;
+  }
+
+  /*get started link container*/
+  .getStartedCont {
+    margin: unset;
+  }
+}

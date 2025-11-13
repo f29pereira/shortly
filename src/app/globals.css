@@ -29,6 +29,7 @@ Global CSS styles
 
 html,
 body {
+  overflow-x: hidden;
   font-family: var(--font-poppins);
   background-color: var(--neutral-0);
   -webkit-font-smoothing: antialiased; /*smooths the edges of fonts on Chrome, Safari, Edge*/
