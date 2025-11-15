@@ -28,7 +28,6 @@ CSS Module for Hero component
 
 /*title*/
 .title {
-  color: var(--gray-900);
   font-size: 2.5rem;
   line-height: 1;
   margin: 2rem auto 1rem auto;
@@ -36,7 +35,6 @@ CSS Module for Hero component
 
 /*Shortly description*/
 .description {
-  color: var(--gray-500);
   line-height: 2;
   margin-bottom: 1rem;
 }

@@ -21,6 +21,7 @@ Global CSS styles
 
   /*Neutral*/
   --neutral-0: hsl(0, 0%, 100%);
+  --gray-300: hsl(230, 25%, 95%);
   --gray-400: hsl(0, 0%, 75%);
   --gray-500: hsl(257, 7%, 63%);
   --gray-900: hsl(255, 11%, 22%);
@@ -43,6 +44,15 @@ a {
 
 ul {
   list-style: none;
+}
+
+h1,
+h2 {
+  color: var(--gray-900);
+}
+
+p {
+  color: var(--gray-500);
 }
 
 /*Available for screen readers*/
