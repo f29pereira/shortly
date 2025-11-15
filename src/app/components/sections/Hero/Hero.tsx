@@ -1,6 +1,6 @@
 import styles from "./Hero.module.css";
 import Image from "next/image";
-import PillLink from "../PillLink/PillLink";
+import PillLink from "../../PillLink/PillLink";
 
 /**
  * Renders the hero section with:
