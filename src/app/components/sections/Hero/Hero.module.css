@@ -46,6 +46,7 @@ CSS Module for Hero component
 
 /*get started link container*/
 .getStartedCont {
+  font-size: 1.2rem;
   max-width: 12.5rem; /*200px*/
   margin: auto;
 }

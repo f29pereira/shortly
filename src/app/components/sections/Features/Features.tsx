@@ -43,7 +43,9 @@ export default function Features() {
         </div>
 
         {/*Feature: Fully Customizable*/}
-        <div className={`${styles.cardCont} ${styles.customizableCont}`}>
+        <div
+          className={`flex-center ${styles.cardCont} ${styles.customizableCont}`}
+        >
           <Card
             iconPath={customizable.iconPath}
             title={customizable.title}
