@@ -47,7 +47,8 @@ ul {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   color: var(--gray-900);
 }
 
@@ -62,6 +63,13 @@ p {
   height: 1px;
   overflow: hidden;
   white-space: nowrap;
+}
+
+/*Centered flex row container*/
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Centered flex column container*/

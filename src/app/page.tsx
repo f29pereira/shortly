@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Hero from "./components/sections/Hero/Hero";
 import Features from "./components/sections/Features/Features";
+import Start from "./components/sections/Start/Start";
 
 /**
  * Renders the Shortly main page with:
@@ -16,6 +17,8 @@ export default function Home() {
       {/*TO DO - Shorten link component*/}
 
       <Features />
+
+      <Start />
     </main>
   );
 }
