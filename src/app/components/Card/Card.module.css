@@ -37,7 +37,12 @@ CSS Module for Card component
   /*main container*/
   .cardCont {
     padding: 0 2.5rem 2.5rem;
-    min-height: 254px;
+    min-height: 15.87rem; /*254px*/
+  }
+
+  /*icon container*/
+  .iconCont {
+    margin: -2.5rem auto 1.5rem 0;
   }
 
   .title,
