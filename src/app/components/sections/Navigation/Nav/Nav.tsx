@@ -4,8 +4,8 @@ import styles from "./Nav.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import HamburgerIcon from "../../HamburgerIcon/HamburgerIcon";
-import PillLink from "../../PillLink/PillLink";
+import HamburgerIcon from "@/app/components/HamburgerIcon/HamburgerIcon";
+import PillLink from "@/app/components/PillLink/PillLink";
 import MobileNav from "../Mobile/MobileNav";
 
 /**

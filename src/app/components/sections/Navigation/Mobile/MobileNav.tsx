@@ -1,6 +1,6 @@
 import styles from "./MobileNav.module.css";
 import Link from "next/link";
-import PillLink from "../../PillLink/PillLink";
+import PillLink from "../../../PillLink/PillLink";
 
 /**
  * Renders the mobile screen pop up page navigation with links for:
