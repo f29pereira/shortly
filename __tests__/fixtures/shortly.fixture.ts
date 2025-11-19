@@ -35,6 +35,19 @@ export const getCustomizableFeature = () => {
 };
 
 /**
+ * Mocked data: Nav component links
+ */
+export const getNavLinks = () => {
+  return {
+    featuresLink: "Features",
+    pricingLink: "Pricing",
+    resourcesLink: "Resources",
+    loginLink: "Login",
+    signUpLink: "Sign Up",
+  };
+};
+
+/**
  * Mocked data: Hero component
  */
 export const getHeroData = () => {
@@ -58,5 +71,40 @@ export const getFeaturesData = () => {
     recognitionFeature: getRecognitionFeature(),
     recordsFeature: getDetailFeature(),
     customizableFeature: getCustomizableFeature(),
+  };
+};
+
+/**
+ * Mocked data: Start component
+ */
+export const getStartData = () => {
+  return {
+    title: "Boost your links today",
+    linkName: "Get Started",
+  };
+};
+
+/**
+ * Mocked data: Footer component
+ */
+export const getFooterData = () => {
+  return {
+    title: "Shortly",
+    // Page Links
+    shorteningLink: "Link Shortening",
+    brandLink: "Brand Links",
+    analyticsLink: "Analytics",
+    blogLink: "Blog",
+    developersLink: "Developers",
+    supportLink: "Support",
+    aboutLink: "About",
+    ourTeamLink: "Our Team",
+    careersLink: "Careers",
+    contact: "Contact",
+    // Social Links
+    facebookLink: "Facebook",
+    twitterLink: "Twitter",
+    pinterestLink: "Pinterest",
+    instagramLink: "Instagram",
   };
 };

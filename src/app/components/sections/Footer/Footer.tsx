@@ -68,7 +68,7 @@ export default function Footer() {
             </li>
             <li>
               <a className={styles.link} href="#">
-                Out Team
+                Our Team
               </a>
             </li>
             <li>

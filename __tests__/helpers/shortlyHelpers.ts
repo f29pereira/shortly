@@ -1,5 +1,11 @@
 import { screen, within } from "@testing-library/react";
-import { getFeaturesData, getHeroData } from "../fixtures/shortly.fixture";
+import {
+  getFeaturesData,
+  getFooterData,
+  getHeroData,
+  getNavLinks,
+  getStartData,
+} from "../fixtures/shortly.fixture";
 
 /**
  * Helper function: checks Nav component elements existence
@@ -110,14 +116,79 @@ export const checkFeatures = () => {
 };
 
 /**
+ * Helper function: checks Start component elements existence
+ */
+export const checkStart = () => {
+  const data = getStartData();
+
+  const header = screen.getByRole("heading", {
+    level: 2,
+    name: data.title,
+  });
+
+  const linkContainer = screen.getByTestId("start-btn-cont");
+  const button = within(linkContainer).getByText(data.linkName);
+
+  // Check elements existence
+  expect(header).toBeInTheDocument();
+  expect(button).toBeInTheDocument();
+};
+
+/**
+ * Helper function: checks Footer component elements existence
+ */
+export const checkFooter = () => {
+  const data = getFooterData();
+
+  const header = screen.getByRole("heading", { level: 2, name: data.title });
+
+  // Page Links
+  const shortening = screen.getByText(data.shorteningLink);
+  const brand = screen.getByText(data.brandLink);
+  const analytics = screen.getByText(data.analyticsLink);
+  const blog = screen.getByText(data.blogLink);
+  const developers = screen.getByText(data.developersLink);
+  const support = screen.getByText(data.supportLink);
+  const about = screen.getByText(data.aboutLink);
+  const ourTeam = screen.getByText(data.ourTeamLink);
+  const careers = screen.getByText(data.careersLink);
+  const contact = screen.getByText(data.contact);
+
+  // Social Links
+  const facebook = screen.getByLabelText(data.facebookLink);
+  const twitter = screen.getByLabelText(data.twitterLink);
+  const pinterest = screen.getByLabelText(data.pinterestLink);
+  const instagram = screen.getByLabelText(data.instagramLink);
+
+  // Check elements existence
+  expect(header).toBeInTheDocument();
+  expect(shortening).toBeInTheDocument();
+  expect(brand).toBeInTheDocument();
+  expect(analytics).toBeInTheDocument();
+  expect(blog).toBeInTheDocument();
+  expect(developers).toBeInTheDocument();
+  expect(support).toBeInTheDocument();
+  expect(about).toBeInTheDocument();
+  expect(ourTeam).toBeInTheDocument();
+  expect(careers).toBeInTheDocument();
+  expect(contact).toBeInTheDocument();
+  expect(facebook).toBeInTheDocument();
+  expect(twitter).toBeInTheDocument();
+  expect(pinterest).toBeInTheDocument();
+  expect(instagram).toBeInTheDocument();
+};
+
+/**
  * Helper function: returns main navigation links
  */
 const getNavigation = () => {
+  const data = getNavLinks();
+
   return {
-    features: screen.getByText("Features"),
-    pricing: screen.getByText("Pricing"),
-    resources: screen.getByText("Resources"),
-    login: screen.getByText("Login"),
-    signUp: screen.getByText("Sign Up"),
+    features: screen.getByText(data.featuresLink),
+    pricing: screen.getByText(data.pricingLink),
+    resources: screen.getByText(data.resourcesLink),
+    login: screen.getByText(data.loginLink),
+    signUp: screen.getByText(data.signUpLink),
   };
 };

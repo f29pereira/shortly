@@ -12,7 +12,7 @@ export default function Start() {
       <h2 className={styles.title}>Boost your links today</h2>
 
       {/*Get started link*/}
-      <div className={styles.getStartedCont}>
+      <div className={styles.getStartedCont} data-testid="start-btn-cont">
         <PillLink description="Get Started" href="#" />
       </div>
     </section>
