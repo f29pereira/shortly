@@ -33,3 +33,30 @@ export const getCustomizableFeature = () => {
       "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.",
   };
 };
+
+/**
+ * Mocked data: Hero component
+ */
+export const getHeroData = () => {
+  return {
+    title: "More than just shorter links",
+    description:
+      "Build your brand's recognition and get detailed insights on how your links are performing.",
+    imagePath: "images/illustration-working.svg",
+    linkName: "Get Started",
+  };
+};
+
+/**
+ * Mocked data: Features component
+ */
+export const getFeaturesData = () => {
+  return {
+    title: "Advanced Statistics",
+    description:
+      "Track how your links are performing across the web with our advanced statistics dashboard",
+    recognitionFeature: getRecognitionFeature(),
+    recordsFeature: getDetailFeature(),
+    customizableFeature: getCustomizableFeature(),
+  };
+};

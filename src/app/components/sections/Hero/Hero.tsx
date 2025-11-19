@@ -15,6 +15,7 @@ export default function Hero() {
       {/*Hero Image*/}
       <div className={styles.imgCont}>
         <Image
+          data-testid="hero-img"
           className={styles.img}
           src="images/illustration-working.svg"
           width={733}
@@ -35,7 +36,7 @@ export default function Hero() {
         </p>
 
         {/*Get started link*/}
-        <div className={styles.getStartedCont}>
+        <div className={styles.getStartedCont} data-testid="hero-btn-cont">
           <PillLink description="Get Started" href="#" />
         </div>
       </div>
