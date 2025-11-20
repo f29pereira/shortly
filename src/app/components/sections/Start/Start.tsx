@@ -1,5 +1,5 @@
 import styles from "./Start.module.css";
-import PillLink from "../../PillLink/PillLink";
+import PillLink from "../../ui/PillLink/PillLink";
 
 /**
  * Renders the get started section with:

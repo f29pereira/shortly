@@ -1,6 +1,5 @@
 import styles from "./Features.module.css";
-import Card from "../../Card/Card";
-
+import Card from "../../ui/Card/Card";
 import { getFeature } from "@/app/utils/utils";
 
 /**

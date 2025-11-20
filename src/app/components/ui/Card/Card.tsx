@@ -1,5 +1,5 @@
 import styles from "./Card.module.css";
-import type { CardProps } from "../types";
+import type { CardProps } from "../../types";
 import Image from "next/image";
 
 /**

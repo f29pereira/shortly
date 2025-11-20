@@ -1,5 +1,5 @@
 import styles from "./Button.module.css";
-import type { ButtonProps } from "../types";
+import type { ButtonProps } from "../../types";
 
 /**
  * Renders a button with:
