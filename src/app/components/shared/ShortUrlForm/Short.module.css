@@ -1,0 +1,75 @@
+/*
+CSS Module for Short component
+*/
+
+/*main container*/
+.shortCont {
+  background-image: url("/images/background/bg-shorten-mobile.svg");
+  background-color: var(--purple-950);
+  background-position: right top;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+/*form container*/
+.formCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*form URL input*/
+.input {
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input::placeholder {
+  color: var(--gray-500);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.input {
+  border: none;
+  border-radius: 5px;
+}
+
+.formCont,
+.btnCont,
+.input {
+  width: 100%;
+}
+
+@media (min-width: 62.5rem /*1000px*/) {
+  /*main section container*/
+  .shortCont {
+    background-image: url("/images/background/bg-shorten-desktop.svg");
+    background-position: unset;
+    background-size: cover;
+    padding: 3.5rem 3em;
+  }
+
+  /*form container*/
+  .formCont {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  /*form URL input*/
+  .input {
+    padding: 1rem;
+    margin: unset;
+  }
+
+  /*submit button container*/
+  .btnCont {
+    max-width: 12.5rem; /*200px*/
+  }
+}
