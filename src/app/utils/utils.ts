@@ -36,3 +36,19 @@ export const getFeature = (
       };
   }
 };
+
+/**
+ * Checks if FormDataEntry is of type string
+ */
+export const isString = (
+  strValue: FormDataEntryValue | null
+): strValue is string => {
+  return typeof strValue === "string";
+};
+
+/**
+ * Checks if string is empty
+ */
+export const isStringEmpty = (strValue: string): boolean => {
+  return strValue === "";
+};
