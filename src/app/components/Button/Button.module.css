@@ -1,0 +1,20 @@
+/*
+CSS Module for Button component
+*/
+
+.button {
+  cursor: pointer;
+  background-color: var(--blue-400);
+  color: var(--neutral-0);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.button:hover {
+  background-color: var(--blue-300);
+}

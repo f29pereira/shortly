@@ -19,3 +19,15 @@ export type CardProps = {
   title: string;
   description: string;
 };
+
+/**
+ * Props for the Button component
+ * @property type        - button type
+ * @property onClickFunc - onClick function
+ * @property name        - button name
+ */
+export type ButtonProps = {
+  type: "submit" | "button";
+  onClickFunc?: React.MouseEventHandler<HTMLButtonElement>;
+  name: string;
+};
