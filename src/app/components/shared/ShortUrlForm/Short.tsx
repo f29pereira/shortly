@@ -2,8 +2,9 @@
 
 import styles from "./Short.module.css";
 import Button from "../../ui/Button/Button";
-import { validateUrl } from "./Short.utils";
+import { validateUrl, fetchShortUrl } from "./Short.utils";
 import { useState } from "react";
+import { isString } from "@/app/utils/utils";
 
 /**
  * Renders the shorten URL form with:
@@ -17,7 +18,7 @@ export default function Short() {
   /**
    * Submits the form to shorten the input URL
    */
-  const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
+  const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
@@ -25,7 +26,7 @@ export default function Short() {
     try {
       const input = formData.get("shortenInput");
 
-      if (typeof input !== "string") {
+      if (!isString(input)) {
         return;
       }
 
@@ -34,9 +35,11 @@ export default function Short() {
       if (inputErrorMsg !== "") {
         setError(inputErrorMsg); // Update error state
         return;
-      }
+      } else {
+        const shortUrl = await fetchShortUrl(input);
 
-      //TO DO - add API (cleanuri) logic
+        //TO DO - save shortUrl value
+      }
     } catch (error) {}
   };
 

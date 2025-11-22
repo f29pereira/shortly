@@ -4,6 +4,26 @@
 import { isString, isStringEmpty } from "@/app/utils/utils";
 
 /**
+ * Fetches short url from cleanuri API
+ */
+export const fetchShortUrl = async (urlInput: string) => {
+  //Server Action: cleanuri API - "/api/shorten"
+  const response = await fetch("/api/shorten", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ url: urlInput }),
+  });
+
+  if (response && response.statusText === "OK") {
+    const url = await response.json();
+
+    return url.result_url;
+  }
+
+  return "";
+};
+
+/**
  * Validates the url input value and returns error message if invalid
  *
  * Valid if:
