@@ -43,3 +43,11 @@ export type UrlCardProps = {
   originalUrl: string;
   shortUrl: string;
 };
+
+/**
+ * Props for the UrlCardsList component
+ * @property urlList - list of UrlCardProps
+ */
+export type UrlCardsListProps = {
+  urlList: UrlCardProps[];
+};

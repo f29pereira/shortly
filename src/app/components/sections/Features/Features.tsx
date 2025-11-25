@@ -1,9 +1,14 @@
+"use client"; // Client Component
+
 import styles from "./Features.module.css";
 import Card from "../../ui/Card/Card";
 import { getFeature } from "@/app/utils/utils";
+import { useAppSelector } from "@/app/hooks";
+import UrlCardsList from "../../shared/Url/UrlCardsList/UrlCardsList";
 
 /**
  * Renders the features section with:
+ * - list of urls (original/short)
  * - advanced statistics description
  * - list of Shortly features: Brand Recognition, Detailed Records and Fully Customizable
  */
@@ -12,8 +17,13 @@ export default function Features() {
   const records = getFeature("records");
   const customizable = getFeature("customizable");
 
+  const list = useAppSelector((state) => state.shortUrls);
+
   return (
     <section className={styles.sectionCont}>
+      {/*List of URLs*/}
+      {list.length > 0 ? <UrlCardsList urlList={list} /> : null}
+
       <h2 className={styles.title}>Advanced Statistics</h2>
 
       <p className={styles.description}>

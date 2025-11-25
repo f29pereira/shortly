@@ -5,6 +5,9 @@ import Button from "../../ui/Button/Button";
 import { validateUrl, fetchShortUrl } from "./Short.utils";
 import { useState } from "react";
 import { isString } from "@/app/utils/utils";
+import { useAppDispatch } from "@/app/hooks";
+import { addUrl } from "@/app/lib/features/shortUrls/shortUrlsSlice";
+import type { UrlCardProps } from "../../types";
 
 /**
  * Renders the shorten URL form with:
@@ -14,6 +17,8 @@ import { isString } from "@/app/utils/utils";
  */
 export default function Short() {
   const [error, setError] = useState<null | string>(null);
+
+  const dispatch = useAppDispatch();
 
   /**
    * Submits the form to shorten the input URL
@@ -38,7 +43,12 @@ export default function Short() {
       } else {
         const shortUrl = await fetchShortUrl(input);
 
-        //TO DO - save shortUrl value
+        const urlObj: UrlCardProps = {
+          originalUrl: input,
+          shortUrl: shortUrl,
+        };
+
+        dispatch(addUrl(urlObj)); // Save new URL object in Redux state
       }
     } catch (error) {}
   };
