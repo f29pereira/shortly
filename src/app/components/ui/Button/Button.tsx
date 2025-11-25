@@ -3,15 +3,34 @@ import type { ButtonProps } from "../../types";
 
 /**
  * Renders a button with:
- * - type
+ * - button type
  * - onClick function (not required)
- * - name
+ * - button name
  *
  * Props are defined in {@link ButtonProps}.
  */
-export default function Button({ type, onClickFunc, name }: ButtonProps) {
+export default function Button({
+  type,
+  styling,
+  onClickFunc,
+  name,
+}: ButtonProps) {
+  let cssStyles;
+
+  if (Array.isArray(styling)) {
+    cssStyles = styling.map((style) => styles[style]).join(" "); // List of CSS classes
+  } else if (styling) {
+    cssStyles = styles[styling]; // Unique CSS class
+  } else {
+    cssStyles = "";
+  }
+
   return (
-    <button className={styles.button} type={type} onClick={onClickFunc}>
+    <button
+      className={`${styles.button} ${cssStyles}`}
+      type={type}
+      onClick={onClickFunc}
+    >
       {name}
     </button>
   );

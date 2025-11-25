@@ -23,11 +23,23 @@ export type CardProps = {
 /**
  * Props for the Button component
  * @property type        - button type
+ * @property styling     - CSS styling classes
  * @property onClickFunc - onClick function
  * @property name        - button name
  */
 export type ButtonProps = {
   type: "submit" | "button";
+  styling?: string | string[];
   onClickFunc?: React.MouseEventHandler<HTMLButtonElement>;
   name: string;
+};
+
+/**
+ * Props for the UrlCard component
+ * @property originalUrl - url submitted by the user
+ * @property shortUrl    - short url
+ */
+export type UrlCardProps = {
+  originalUrl: string;
+  shortUrl: string;
 };

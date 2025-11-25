@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import type { UrlCardProps } from "@/app/components/types";
 
-const initialState: string[] = [];
+const initialState: UrlCardProps[] = [];
 
 /**
  * Short Urls slice
@@ -9,7 +10,7 @@ export const shortUrlsSlice = createSlice({
   name: "shortUrls",
   initialState,
   reducers: {
-    addUrl: (state, action: PayloadAction<string>) => {
+    addUrl: (state, action: PayloadAction<UrlCardProps>) => {
       state.push(action.payload);
     },
   },
