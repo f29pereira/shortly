@@ -6,6 +6,8 @@ import {
   getNavLinks,
   getStartData,
 } from "../fixtures/shortly.fixture";
+import { configureStore } from "@reduxjs/toolkit";
+import { shortUrlsSlice } from "@/app/lib/features/shortUrls/shortUrlsSlice";
 
 /**
  * Helper function: checks Nav component elements existence
@@ -191,4 +193,18 @@ const getNavigation = () => {
     login: screen.getByText(data.loginLink),
     signUp: screen.getByText(data.signUpLink),
   };
+};
+
+/**
+ * Helper function: creates mocked Redux store
+ */
+export const createReduxStoreMock = () => {
+  const store = configureStore({
+    reducer: {
+      shortUrls: shortUrlsSlice.reducer,
+    },
+    preloadedState: {
+      shortUrls: [],
+    },
+  });
 };
