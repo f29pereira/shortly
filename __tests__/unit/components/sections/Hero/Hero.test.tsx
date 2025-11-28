@@ -1,8 +1,6 @@
-import { render } from "@testing-library/react";
+import { renderWithProviders } from "../../../../helpers/reduxHelper";
 import Hero from "@/app/components/sections/Hero/Hero";
 import { checkHero } from "../../../../helpers/shortlyHelpers";
-import { createReduxStoreMock } from "../../../../helpers/shortlyHelpers";
-import StoreProvider from "@/app/StoreProvider";
 
 /**
  * Unit test for component: Hero
@@ -10,13 +8,7 @@ import StoreProvider from "@/app/StoreProvider";
 describe("Hero component", () => {
   // Runs before each test
   beforeEach(() => {
-    createReduxStoreMock();
-
-    render(
-      <StoreProvider>
-        <Hero />
-      </StoreProvider>
-    );
+    renderWithProviders(<Hero />);
   });
 
   it("renders section with image of a person working, main title, description and get started link", () => {

@@ -1,8 +1,6 @@
-import { render } from "@testing-library/react";
+import { renderWithProviders } from "../../../../helpers/reduxHelper";
 import Features from "@/app/components/sections/Features/Features";
 import { checkFeatures } from "../../../../helpers/shortlyHelpers";
-import { createReduxStoreMock } from "../../../../helpers/shortlyHelpers";
-import StoreProvider from "@/app/StoreProvider";
 
 /**
  * Unit test for component: Features
@@ -10,13 +8,7 @@ import StoreProvider from "@/app/StoreProvider";
 describe("Features component", () => {
   // Runs before each test
   beforeEach(() => {
-    createReduxStoreMock();
-
-    render(
-      <StoreProvider>
-        <Features />
-      </StoreProvider>
-    );
+    renderWithProviders(<Features />);
   });
 
   it("renders section with title, description and the features: Brand Recognition, Detailed Records and Fully Customizable", () => {

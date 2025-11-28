@@ -108,3 +108,13 @@ export const getFooterData = () => {
     instagramLink: "Instagram",
   };
 };
+
+/**
+ * Mocked data: UrlCard component
+ */
+export const getUrlCardData = () => {
+  return {
+    originalUrl: "http://wwww.example.com",
+    shortUrl: "https://cleanuri.com/example",
+  };
+};

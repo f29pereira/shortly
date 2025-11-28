@@ -5,6 +5,7 @@ import {
   getHeroData,
   getNavLinks,
   getStartData,
+  getUrlCardData,
 } from "../fixtures/shortly.fixture";
 import { configureStore } from "@reduxjs/toolkit";
 import { shortUrlsSlice } from "@/app/lib/features/shortUrls/shortUrlsSlice";
@@ -137,6 +138,44 @@ export const checkStart = () => {
 };
 
 /**
+ * Helper function: checks Short component elements existence
+ */
+export const checkShort = () => {
+  // URL Input
+  const urlInput = screen.getByLabelText("URL");
+
+  // Submit button
+  const submitBtn = screen.getByRole("button", {
+    name: "Shorten It!",
+  });
+
+  // Check elements existence
+  expect(urlInput).toBeInTheDocument();
+  expect(submitBtn).toBeInTheDocument();
+};
+
+/**
+ * Helper function: checks UrlCard component elements existence
+ */
+export const checkUrlCard = () => {
+  const data = getUrlCardData();
+
+  // URLs
+  const originalUrl = screen.getByText(data.originalUrl);
+  const shortUrl = screen.getByText(data.shortUrl);
+
+  // Copy Button
+  const copyBtn = screen.getByRole("button", {
+    name: "Copy",
+  });
+
+  // Check elements existence
+  expect(originalUrl).toBeInTheDocument();
+  expect(shortUrl).toBeInTheDocument();
+  expect(copyBtn).toBeInTheDocument();
+};
+
+/**
  * Helper function: checks Footer component elements existence
  */
 export const checkFooter = () => {
@@ -193,18 +232,4 @@ const getNavigation = () => {
     login: screen.getByText(data.loginLink),
     signUp: screen.getByText(data.signUpLink),
   };
-};
-
-/**
- * Helper function: creates mocked Redux store
- */
-export const createReduxStoreMock = () => {
-  const store = configureStore({
-    reducer: {
-      shortUrls: shortUrlsSlice.reducer,
-    },
-    preloadedState: {
-      shortUrls: [],
-    },
-  });
 };
