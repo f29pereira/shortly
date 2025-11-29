@@ -49,6 +49,7 @@ export default function UrlCard({ originalUrl, shortUrl }: UrlCardProps) {
   return (
     <div className={styles.urlCardCont}>
       {/*Original URL*/}
+      <h2 className="sr-only">Original URL</h2>
       <div className={styles.urlCont}>
         <span className={styles.original}>{originalUrl}</span>
       </div>
@@ -57,6 +58,7 @@ export default function UrlCard({ originalUrl, shortUrl }: UrlCardProps) {
 
       <div className={styles.shortBtnCont}>
         {/*Short URL*/}
+        <h2 className="sr-only">Short URL</h2>
         <div className={styles.urlCont}>
           <span className={styles.short}>{shortUrl}</span>
         </div>

@@ -22,7 +22,9 @@ export default function Features() {
   return (
     <section className={styles.sectionCont}>
       {/*List of URLs*/}
-      {list.length > 0 ? <UrlCardsList urlList={list} /> : null}
+      <div aria-live="assertive" aria-atomic="true">
+        {list.length > 0 ? <UrlCardsList urlList={list} /> : null}
+      </div>
 
       <h2 className={styles.title}>Advanced Statistics</h2>
 
