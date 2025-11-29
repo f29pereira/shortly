@@ -157,12 +157,12 @@ export const checkShort = () => {
 /**
  * Helper function: checks UrlCard component elements existence
  */
-export const checkUrlCard = () => {
+export const checkUrlCard = (originalUrl: string, shortUrl: string) => {
   const data = getUrlCardData();
 
   // URLs
-  const originalUrl = screen.getByText(data.originalUrl);
-  const shortUrl = screen.getByText(data.shortUrl);
+  const original = screen.getByText(originalUrl);
+  const short = screen.getByText(shortUrl);
 
   // Copy Button
   const copyBtn = screen.getByRole("button", {
@@ -170,8 +170,8 @@ export const checkUrlCard = () => {
   });
 
   // Check elements existence
-  expect(originalUrl).toBeInTheDocument();
-  expect(shortUrl).toBeInTheDocument();
+  expect(original).toBeInTheDocument();
+  expect(short).toBeInTheDocument();
   expect(copyBtn).toBeInTheDocument();
 };
 

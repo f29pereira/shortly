@@ -12,7 +12,11 @@ const config: Config = {
   testEnvironment: "jsdom",
   // Add more setup options before each test is run
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
-  //ignore fixtures and helpers folders files
+  // Absolute imports
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/src/$1",
+  },
+  // Ignore fixtures and helpers folders files
   testPathIgnorePatterns: [
     "<rootDir>/__tests__/fixtures/.*",
     "<rootDir>/__tests__/helpers/.*",

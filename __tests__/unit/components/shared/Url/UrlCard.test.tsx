@@ -14,7 +14,7 @@ describe("UrlCard component", () => {
     render(<UrlCard originalUrl={data.originalUrl} shortUrl={data.shortUrl} />);
   });
 
-  it("renders orinal URL, short URL and copy button", () => {
-    checkUrlCard();
+  it("renders original URL, short URL and copy button", () => {
+    checkUrlCard(data.originalUrl, data.shortUrl);
   });
 });
