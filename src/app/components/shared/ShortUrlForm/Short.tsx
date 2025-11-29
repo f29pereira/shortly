@@ -16,9 +16,17 @@ import type { UrlCardProps } from "../../types";
  * - Submit button
  */
 export default function Short() {
-  const [error, setError] = useState<null | string>(null);
+  const [inputValue, setInputValue] = useState<string>(""); // URL Input value
+  const [error, setError] = useState<null | string>(null); // URL Input error message
 
   const dispatch = useAppDispatch();
+
+  /**
+   * Updates URL Input value
+   */
+  function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setInputValue(e.target.value);
+  }
 
   /**
    * Submits the form to shorten the input URL
@@ -49,8 +57,12 @@ export default function Short() {
         };
 
         dispatch(addUrl(urlObj)); // Save new URL object in Redux state
+
+        setInputValue(""); // Reset URL Input value
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -68,6 +80,8 @@ export default function Short() {
             id="shortenInput"
             name="shortenInput"
             placeholder="Shorten a link here..."
+            value={inputValue}
+            onChange={handleInputChange}
           />
 
           {/*URL Input Error Message*/}

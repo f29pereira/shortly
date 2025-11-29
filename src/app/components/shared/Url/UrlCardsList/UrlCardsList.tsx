@@ -10,9 +10,11 @@ import UrlCard from "../UrlCard/UrlCard";
  * Props are defined in {@link UrlCardsListProps}.
  */
 export default function UrlCardsList({ urlList }: UrlCardsListProps) {
+  const list = urlList.slice().reverse();
+
   return (
     <div className={styles.urlCardListCont}>
-      {urlList.map((url, index) => (
+      {list.map((url, index) => (
         <UrlCard
           key={index}
           originalUrl={url.originalUrl}
