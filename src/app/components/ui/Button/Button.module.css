@@ -1,0 +1,43 @@
+/*
+CSS Module for Button component
+*/
+
+.button {
+  cursor: pointer;
+  background-color: var(--blue-400);
+  color: var(--neutral-0);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.8rem 2rem;
+}
+
+.button:hover {
+  background-color: var(--blue-300);
+}
+
+/*copy button: used by UrlCard component*/
+.copyBtn {
+  font-size: 1rem;
+}
+
+/*change button color when is clicked: used by UrlCard component*/
+.copied,
+.copied:hover {
+  background-color: var(--purple-950);
+}
+
+@media (min-width: 62.5rem /*1000px*/) {
+  .button {
+    padding: 1rem 2rem;
+  }
+
+  /*copy button: used by UrlCard component*/
+  .copyBtn {
+    max-height: 3.125rem; /*50px*/
+    width: 8.125rem; /*130px*/
+  }
+}

@@ -1,0 +1,77 @@
+/*
+CSS Module for Nav component
+*/
+
+/*nav container*/
+.navCont {
+  padding: 3rem 2rem 0 2rem;
+}
+
+/*left navigation: container*/
+.leftNavCont {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+/*nav shortly logo*/
+.navLogo {
+  width: 115px;
+  height: 30px;
+}
+
+/*HamburgerIcon component container*/
+.hamburgerButton {
+  border: none;
+  background: none;
+  margin-left: auto;
+}
+
+/*left navigation: desktop links*/
+.leftNavDesktop {
+  display: none;
+}
+
+/*right navigation: desktop links*/
+.rightNavDesktop {
+  display: none;
+}
+
+/*navigation links*/
+.navLink {
+  color: var(--gray-500);
+  font-weight: 700;
+}
+
+.navLink:hover {
+  color: var(--gray-950);
+}
+
+@media (min-width: 48rem /*768px*/) {
+  /*nav container*/
+  .navCont {
+    padding: 3rem 8rem 0 8rem;
+  }
+}
+
+@media (min-width: 62.5rem /*1000px*/) {
+  /*HamburgerIcon component container*/
+  .hamburgerButton {
+    display: none;
+  }
+
+  /*left navigation: desktop links*/
+  .leftNavDesktop {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /*right navigation: desktop links*/
+  .rightNavDesktop {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-left: auto;
+  }
+}

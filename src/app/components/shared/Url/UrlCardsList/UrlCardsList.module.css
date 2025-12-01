@@ -1,0 +1,8 @@
+/*
+CSS Module for UrlCardList component
+*/
+
+/*List of UrlCard components container*/
+.urlCardListCont {
+  margin: -3rem 0 4rem 0;
+}

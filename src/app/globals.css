@@ -1,0 +1,81 @@
+/*
+Global CSS styles
+*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /*Font*/
+  --font-inconsolata: "Poppins", sans-serif;
+
+  /*Primary*/
+  --blue-400: hsl(180, 66%, 49%);
+  --blue-300: hsl(180, 66%, 59%);
+  --purple-950: hsl(257, 27%, 26%);
+
+  /*Secondary*/
+  --red-400: hsl(0, 87%, 67%);
+
+  /*Neutral*/
+  --neutral-0: hsl(0, 0%, 100%);
+  --gray-300: hsl(230, 25%, 95%);
+  --gray-400: hsl(0, 0%, 75%);
+  --gray-500: hsl(257, 7%, 63%);
+  --gray-900: hsl(255, 11%, 22%);
+  --gray-950: hsl(260, 8%, 14%);
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: var(--font-poppins);
+  background-color: var(--neutral-0);
+  -webkit-font-smoothing: antialiased; /*smooths the edges of fonts on Chrome, Safari, Edge*/
+  -moz-osx-font-smoothing: grayscale; /*smooths the edges of fonts Firefox on macOS*/
+}
+
+a {
+  text-decoration: none;
+  color: var(--neutral-0);
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--gray-900);
+}
+
+p {
+  color: var(--gray-500);
+}
+
+/*Available for screen readers*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/*Centered flex row container*/
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Centered flex column container*/
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
