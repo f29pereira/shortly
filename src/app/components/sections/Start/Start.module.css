@@ -4,7 +4,7 @@ CSS Module for Start component
 
 /*main section background*/
 .sectionCont {
-  background-image: url("/images/background/bg-boost-mobile.svg");
+  background-image: url("/shortly/images/background/bg-boost-mobile.svg");
   background-color: var(--purple-950);
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@ CSS Module for Start component
 @media (min-width: 62.5rem /*1000px*/) {
   /*main section background*/
   .sectionCont {
-    background-image: url("/images/background/bg-boost-desktop.svg");
+    background-image: url("/shortly/images/background/bg-boost-desktop.svg");
     padding: 5rem 0 4rem 0;
   }
 
