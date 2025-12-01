@@ -1,0 +1,94 @@
+/*
+CSS Module for Short component
+*/
+
+/*main container*/
+.shortCont {
+  background-image: url("/images/background/bg-shorten-mobile.svg");
+  background-color: var(--purple-950);
+  background-position: right top;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+/*form container*/
+.formCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+/*form URL input and error message container*/
+.inputCont {
+  width: 100%;
+  position: relative;
+}
+
+/*form URL input*/
+.input {
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 0.5rem;
+}
+
+.input::placeholder {
+  color: var(--gray-500);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/*form URL input: error state*/
+.inputError {
+  border: 3px solid var(--red-400);
+}
+
+/*form URL input: error message*/
+.errorMessage {
+  align-self: flex-start;
+  font-style: italic;
+  color: var(--red-400);
+  margin-top: -0.5rem;
+}
+
+.inputError::placeholder,
+.errorMessage {
+  color: var(--red-400);
+}
+
+.input,
+.btnCont {
+  min-height: 3.37rem; /*54px*/
+  width: 100%;
+}
+
+@media (min-width: 62.5rem /*1000px*/) {
+  /*main section container*/
+  .shortCont {
+    background-image: url("/images/background/bg-shorten-desktop.svg");
+    background-position: unset;
+    background-size: cover;
+    padding: 3.2rem 3rem;
+  }
+
+  /*form container*/
+  .formCont {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  /*form URL input*/
+  .input {
+    padding: 1rem;
+    margin: unset;
+  }
+
+  /*submit button container*/
+  .btnCont {
+    max-width: 12.5rem; /*200px*/
+  }
+}

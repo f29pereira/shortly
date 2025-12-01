@@ -1,0 +1,21 @@
+/*
+CSS Module for HamburgerIcon component
+*/
+
+/*main container*/
+.hamburguerCont {
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+/*hamburger line*/
+.hamburguerLine {
+  height: 0.2rem;
+  width: 100%;
+  background-color: var(--gray-500);
+  margin-bottom: 0.4rem;
+}
+
+.hamburguerCont:hover > .hamburguerLine {
+  background-color: var(--gray-950);
+}

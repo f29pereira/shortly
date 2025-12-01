@@ -1,0 +1,112 @@
+/*
+CSS Module for Footer component
+*/
+
+/*main container*/
+.footerCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--gray-950);
+  padding: 4rem 0;
+}
+
+/*main title*/
+.title {
+  color: var(--neutral-0);
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+/*navigation container*/
+.navCont {
+  margin-bottom: 2rem;
+}
+
+/*navigation title*/
+.navTitle {
+  color: var(--neutral-0);
+  text-align: center;
+  margin: 1rem;
+}
+
+/*page links container*/
+.pageLinksCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*link*/
+.link {
+  color: var(--gray-500);
+}
+
+.link:hover {
+  color: var(--blue-400);
+}
+
+/*socials navigation container*/
+.socialsNavCont {
+  margin-top: 4rem;
+}
+
+/*social links container*/
+.socialLinksCont {
+  gap: 2rem;
+}
+
+/*social icon*/
+.socialIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.socialIcon:hover path {
+  fill: var(--blue-400);
+}
+
+@media (min-width: 62.5rem /*1000px*/) {
+  /*main container*/
+  .footerCont {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5rem 4rem;
+  }
+
+  /*page links and social links container*/
+  .linksCont {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  /*navigation title*/
+  .navTitle {
+    margin-top: unset;
+  }
+
+  /*socials navigation container*/
+  .socialsNavCont {
+    margin: unset;
+  }
+}
+
+@media (min-width: 87.5rem /*1400px*/) {
+  /*main container*/
+  .footerCont {
+    padding: 6rem 8rem;
+  }
+
+  /*page and social links container*/
+  .linksCont {
+    gap: 4rem;
+  }
+
+  /*social links container*/
+  .socialLinksCont {
+    gap: 3rem;
+  }
+}
