@@ -42,6 +42,18 @@ CSS Module for UrlCard component
   white-space: nowrap;
 }
 
+/*URL card error*/
+.urlCardCont.error {
+  border: 1px solid var(--red-400);
+  text-align: center;
+  padding: 1rem;
+}
+
+/*error message text*/
+.msg {
+  margin: 0.5rem 0;
+}
+
 @media (min-width: 62.5rem /*1000px*/) {
   /*URL card container*/
   .urlCardCont {
@@ -73,6 +85,17 @@ CSS Module for UrlCard component
   .btnCont {
     padding: unset;
   }
+
+  /*URL card error*/
+  .urlCardCont.error {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /*Original URL for error card*/
+  .urlCardCont.error .original {
+    margin: auto;
+  }
 }
 
 @media (min-width: 87.5rem /*1400px*/) {
@@ -91,5 +114,23 @@ CSS Module for UrlCard component
   /*original URL*/
   .original {
     max-width: unset;
+  }
+
+  /*URL card error*/
+  .urlCardCont.error {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /*error message container*/
+  .errorMsgCont {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /*error message text*/
+  .msg {
+    margin: unset;
   }
 }
